@@ -1,0 +1,177 @@
+{
+  "flights" : [
+    {
+      "departure" : "Edinburgh",
+      "arrival"   : "Melbourne",
+      "departCountry": "UK",
+      "arrivalCountry" : "AUS",
+      "departing" : "28-03-2016 T08:00:00", 
+      "arriving"  : "29-03-2016 T10:00:00", 
+      "price"     : 248
+    },
+    {
+      "departure" : "Edinburgh",
+      "arrival"   : "Melbourne",
+      "departCountry": "UK",
+      "arrivalCountry" : "AUS",
+      "departing" : "28-03-2016 T12:00:00", 
+      "arriving"  : "29-03-2016 T13:00:00", 
+      "price"     : 256
+    },
+    {
+      "departure" : "Edinburgh",
+      "arrival"   : "Sydney",
+      "departCountry": "UK",
+      "arrivalCountry" : "AUS",
+      "departing" : "28-03-2016 T10:00:00", 
+      "arriving"  : "28-03-2016 T11:00:00", 
+      "price"     : 293
+    },
+    {
+      "departure" : "Edinburgh",
+      "arrival"   : "Sydney",
+      "departCountry": "UK",
+      "arrivalCountry" : "AUS",
+      "departing" : "28-03-2016 T04:00:00", 
+      "arriving"  : "28-03-2016 T06:00:00", 
+      "price"     : 310
+    },
+    {
+      "departure" : "Edinburgh",
+      "arrival"   : "Canberra",
+      "departCountry": "UK",
+      "arrivalCountry" : "AUS",
+      "departing" : "28-03-2016 T11:00:00", 
+      "arriving"  : "29-03-2016 T13:00:00", 
+      "price"     : 212
+    },
+    {
+      "departure" : "Edinburgh",
+      "arrival"   : "Canberra",
+      "departCountry": "UK",
+      "arrivalCountry" : "AUS",
+      "departing" : "28-03-2016 T10:00:00", 
+      "arriving"  : "29-03-2016 T12:00:00", 
+      "price"     : 245
+    }
+  ],
+  "hotels" : [
+    {
+      "name"      : "Cosmopolitan Hotel Melbourne - by 8Hotels",
+      "pricePerPerson" : 32,
+      "rooms"     : 10,
+      "stars"     : 3,
+      "address"   : {
+        "building"  : "2 - 8",
+        "street"    : "Carlisle Street",
+        "city"      : "Melbourne",
+        "country"   : "Australia",
+        "zip"       : 3182
+      }
+    },
+    {
+      "name"      : "Mantra on The Park",
+      "pricePerPerson" : 142,
+      "rooms"     : 43,
+      "stars"     : 5,
+      "address"   : {
+        "building"  : "333",
+        "street"    : "Exhibition Street, Melbourne CBD",
+        "city"      : "Melbourne",
+        "country"   : "Australia",
+        "zip"       : 3000
+      }
+    },
+    {
+      "name"      : "Citadines on Bourke Melbourne",
+      "pricePerPerson" : 12,
+      "rooms"     : 60,
+      "stars"     : 1,
+      "address"   : {
+        "building"  : "131-135",
+        "street"    : "Bourke Street",
+        "city"      : "Melbourne",
+        "country"   : "Australia",
+        "zip"       : 3000
+      }
+    },
+    {
+      "name"      : "The York by Swiss-Belhotel",
+      "pricePerPerson" : 78,
+      "rooms"     : 130,
+      "stars"     : 4,
+      "address"   : {
+        "building"  : "5",
+        "street"    : "York Street, Sydney CBD",
+        "city"      : "Sydney",
+        "country"   : "Australia",
+        "zip"       : 2000
+      }
+    },
+    {
+      "name"      : "Meriton Serviced Apartments World Tower",
+      "pricePerPerson" : 55,
+      "rooms"     : 14,
+      "stars"     : 2,
+      "address"   : {
+        "building"  : "95",
+        "street"    : "Liverpool Street, Sydney CBD",
+        "city"      : "Sydney",
+        "country"   : "Australia",
+        "zip"       : 2000
+      }
+    },
+    {
+      "name"      : "Maze Backpackers",
+      "pricePerPerson" : 12,
+      "rooms"     : 102,
+      "stars"     : 1,
+      "address"   : {
+        "building"  : "417",
+        "street"    : "Pitt Street, Sydney CBD",
+        "city"      : "Sydney",
+        "country"   : "Australia",
+        "zip"       : 2000
+      }
+    },
+    {
+      "name"      : "Crowne Plaza Canberra",
+      "pricePerPerson" : 45,
+      "rooms"     : 20,
+      "stars"     : 3,
+      "address"   : {
+        "building"  : "1",
+        "street"    : "Binara Street",
+        "city"      : "Canberra",
+        "country"   : "Australia",
+        "zip"       : 2601
+      }
+    },
+    {
+      "name"      : "Aria Hotel",
+      "pricePerPerson" : 80,
+      "rooms"     : 8,
+      "stars"     : 4,
+      "address"   : {
+        "building"  : "45",
+        "street"    : "Dooring Street, Dickson",
+        "city"      : "Canberra",
+        "country"   : "Australia",
+        "zip"       : 2602
+      }
+    },
+    {
+      "name"      : "Canberra Rex Hotel",
+      "pricePerPerson" : 102,
+      "rooms"     : 170,
+      "stars"     : 4,
+      "address"   : {
+        "building"  : "150",
+        "street"    : "Northbourne Ave, Braddon",
+        "city"      : "Canberra",
+        "country"   : "Australia",
+        "zip"       : 2612
+      }
+    }
+  ]
+}

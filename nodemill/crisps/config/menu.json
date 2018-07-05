@@ -1,0 +1,30 @@
+{
+  "cms": {
+    "items": [
+      {
+        "title": "Admin",
+        "users": [
+          "admin"
+        ],
+        "subItems": [
+          {
+            "title": "Users",
+            "route": "users"
+          },
+          {
+            "title": "Admin",
+            "route": "admin"
+          }
+        ]
+      }
+    ]
+  },
+  "site": {
+    "items": [
+      {
+        "title": "Home",
+        "route": "home"
+      }
+    ]
+  }
+}

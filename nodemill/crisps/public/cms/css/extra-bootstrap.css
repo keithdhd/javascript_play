@@ -1,0 +1,59 @@
+
+body {
+  background-image: url("/public/img/back2.jpg");
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.panel {
+  border-radius: 0px;
+  -webkit-box-shadow: 0px 3px 30px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 30px -4px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 30px -4px rgba(0,0,0,0.75);
+}
+
+.panel-heading {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.panel-primary {
+  border-color:#333;
+}
+
+.panel-primary > .panel-heading {
+  background-color:#666;
+  border-color:#333;
+}
+
+
+.selected{
+  font-weight: bold;
+}
+
+
+.voffset { margin-top: 2px; }
+.voffset1 { margin-top: 5px; }
+.voffset2 { margin-top: 10px; }
+.voffset3 { margin-top: 15px; }
+.voffset4 { margin-top: 30px; }
+.voffset5 { margin-top: 40px; }
+.voffset6 { margin-top: 60px; }
+.voffset7 { margin-top: 80px; }
+.voffset8 { margin-top: 100px; }
+.voffset9 { margin-top: 150px; }
+
+
+.loginbox {margin-top: 0px;}
+
+@media screen and (min-width: 1000px) {
+  .loginbox {margin-top: 60px;}
+}
+
+@media screen and (min-width: 1400px) {
+  .loginbox {margin-top: 100px;}
+}
+
+@media screen and (min-width: 2000px) {
+  .loginbox {margin-top: 120px;}
+}

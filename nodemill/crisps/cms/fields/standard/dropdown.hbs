@@ -1,0 +1,22 @@
+{{!--
+@group Standard
+@desc Dropdown field - select one item from a list; Use the data param to populate or you can use it as a lookup from a table
+@param data object of key/value pairs where key is put into the database but value is displayed
+@param table [optional] use instead of data to populate the data from this table instead
+@param key [optional] (usually _id) - the key field for the lookup data
+@param value [optional] the field from table for the values shown in the dropdown
+@example size: {type: "dropdown", title: "Size", data: {sm: "Small", md: "Medium", lg: "Large"}, noBlank: true}
+@example city: {type: "dropdown", title: "City", table: "cities", key: "_id", value: "name"}
+--}}
+
+
+
+<select class="form-control" name="{{field}}" id="{{id}}">
+  {{#if options.noBlank}}
+  {{else}}
+  <option value=""/>
+  {{/if}}
+  {{#each options.data}}
+    <option value="{{@key}}" {{#isequal @key ../value}} selected {{/isequal}}>{{this}}</option>
+  {{/each}}
+</select>

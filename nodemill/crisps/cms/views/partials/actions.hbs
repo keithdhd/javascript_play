@@ -1,0 +1,37 @@
+{{#each actions}}
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{title}}</h3>
+      </div>
+      <div class="panel-body">        
+        <div>{{{text}}}</div>
+        {{#if button}}
+        <form method="post">
+          <input type="hidden" name="isAction" value="1"/>
+          <input type="hidden" name="actionIndex" value="{{@index}}"/>
+          <div class="voffset2 row">
+            {{#if options}}
+            <div class="col-sm-3">
+              <select class="form-control" name="{{options.field}}" id="{{options.field}}">
+                {{#unless options.noBlank}}<option value=""/>{{/unless}}
+                {{#each options.data}}
+                  <option value="{{@key}}" {{#isequal @key ../options.value}} selected {{/isequal}}>{{this}}</option>
+                {{/each}}
+              </select>
+            </div>
+            {{/if}}
+            <div class="col-sm-3">
+              <input value="{{button}}" class="btn btn-success" style="max-width: 120px;" type="submit">
+            </div>
+
+          </div>
+        </form>
+        {{/if}}
+
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<base href="/">
+
+<link rel="icon" type="image/png" href="/public/img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/public/img/favicon-16x16.png" sizes="16x16" />
+<title>
+  {{#if menu.currentPageTitle}}
+    {{menu.sitename}} : {{menu.currentPageTitle}}
+  {{else}}
+    Nodemill
+  {{/if}}
+</title>
+
+{{#each includes.css}}
+  <link href="{{this}}" rel="stylesheet">
+{{/each}}
+
+
+{{#each includes.js}}
+  <script src="{{this}}"></script>
+{{/each}}
+
+</head>
+
+<body {{#if background}}style="background-image: url(/public/img/{{background}});"{{/if}}>
+
+  {{> menu}}
+  {{! see /views/partials/menu.hbs}}
+
+  <div class="container" id="main">
+
+    {{> message}}
+
+
+    {{{body}}}
+  </div>
+</body>
+</html>

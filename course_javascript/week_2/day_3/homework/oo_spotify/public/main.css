@@ -1,0 +1,27 @@
+body{
+  background-color: #282828;
+}
+
+main{
+  width: 300px;
+  margin: 20px auto;
+}
+
+a{
+  outline: none;
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 2px;
+  color: #2ebd59;
+}
+
+a:hover {  
+  background: #2ebd59;
+  color: #282828;
+}
+
+.album{
+  margin: 5px;
+  padding: 2px;
+}
+

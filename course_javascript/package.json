@@ -1,0 +1,27 @@
+{
+  "name": "course_javascript",
+  "version": "1.0.0",
+  "description": "CodeClan JavaScript course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "find week_* -name *.js ! -path '*node_modules*' -print0 | xargs -0 -I {} ./node_modules/.bin/eslint {} --ignore-pattern 'node_modules'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeclan/course_javascript.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/codeclan/course_javascript/issues"
+  },
+  "homepage": "https://github.com/codeclan/course_javascript#readme",
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0"
+  }
+}

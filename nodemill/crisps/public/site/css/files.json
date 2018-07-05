@@ -1,0 +1,18 @@
+{
+  "info": "This is the order that these files are minified, please feel free to edit the list below. New items will be added automatically to the foot of this list",
+  "order": [
+    "jasny-bootstrap.css",
+    "0.bootstrap.css",
+    "bootstrap-datepicker3.min.css",
+    "dataTables.css",
+    "dropzone.css",
+    "extra-bootstrap.css",
+    "basic.css",
+    "jquery-te-1.4.0.css",
+    "jquery-ui.min.css",
+    "jquery-ui.structure.min.css",
+    "jquery-ui.theme.min.css",
+    "nodemill.css",
+    "sweetalert.css"
+  ]
+}

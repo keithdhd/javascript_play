@@ -1,0 +1,66 @@
+<div class="form-group" id="field_{{id}}">
+  <div class="col-sm-3">
+    <label class="control-label" style="width:100%;">
+      {{#if options.tip}}
+      <i data-original-title="{{options.tip}}" class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title=""></i>
+      {{/if}}
+      {{title}}
+    </label>
+  </div>
+  <div class="col-sm-6" id="content_{{id}}">
+    {{#if array}}
+      <div id="multiplecontainer_{{id}}">
+        {{#each html}}
+          <div class="outer outer_{{../id}}" id="outer_{{../id}}_{{@index}}" style="position: relative">
+            <div class="inner_{{../id}}" id="inner_{{../id}}_{{@index}}" style="margin: 0 45px 6px 0;">
+              {{{this}}}
+              <span class="glyphicon glyphicon-resize-vertical" style="height: 32px; line-height: 32px; position: absolute; top: 1px; right: 27px; color: #666;" aria-hidden="true"></span>
+              <button type="button" style="width: 24px; height: 24px; position: absolute; top: 5px; right: 0;" class="btn btn-danger btn-xs btn-remove" >-</button>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+      <button type="button" class="btn" onClick="javascript: add_{{id}}();">Add item</button>
+      <div class="outer outer_{{id}} cloneable" id="replace_{{id}}" style="display: none; position: relative;">
+        <div class="inner_{{id}}" style="margin: 0 45px 6px 0;">
+          {{{newItem}}}
+          <span class="glyphicon glyphicon-resize-vertical" style="height: 32px; line-height: 32px; position: absolute; top: 1px; right: 27px; color: #666;" aria-hidden="true"></span>
+          <button type="button" style="width: 24px; height: 24px; position: absolute; top: 5px; right: 0;" class="btn btn-danger btn-xs btn-remove" >-</button>
+        </div>
+      </div>
+    {{else}}
+      {{{html}}}
+    {{/if}}
+  </div>
+
+</div>
+
+
+
+
+{{#if array}}
+<script>
+  $('#multiplecontainer_{{id}}').on('click', '.btn-remove', function(e){
+    $(e.target).parents('.outer').remove();
+  });
+
+  function add_{{id}}() {
+    var idRef=Math.floor((Math.random() * 1000000) + 1) + '';
+    var newItem=$('#replace_{{id}}').clone().removeClass('cloneable').show().attr('id', 'replace_' + idRef);
+    newItem.html(function(i, oldHTML) {
+      return oldHTML.replace(/XXXX/g, idRef);
+    });
+    $('#multiplecontainer_{{id}}').append(newItem);
+
+    // Does the new field need inititalising, see image.hbs for example
+    var initFunction = "init_{{id}}_id_" + idRef;
+    if (window[initFunction]) window[initFunction]();
+    $( "#multiplecontainer_{{id}}" ).sortable();
+  }
+  $( function() {
+    $( "#multiplecontainer_{{id}}" ).sortable({handle: '.glyphicon'});
+    //$( "#multiplecontainer_{{id}}" ).disableSelection();
+  } );
+
+</script>
+{{/if}}

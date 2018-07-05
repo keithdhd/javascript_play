@@ -1,0 +1,12 @@
+{
+  "cmspath": "/cms/",
+  "siteEnabled": false,
+  "port": 3000,
+  "allowIPChange": true,
+  "name": "crisps",
+  "db": {
+    "type": "mongo",
+    "url": "mongodb://localhost:27017/crisps"
+  },
+  "salt": "49478564aca3682764e331a73cc7f15e"
+}

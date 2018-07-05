@@ -1,0 +1,62 @@
+{{!--
+@group Standard
+@desc Image upload
+@example name: {type: "image", title: "Image"}
+@require resize-crop https://www.npmjs.com/package/resize-crop
+--}}
+
+
+<div class="row">
+  <div class="col-xs-{{#if value}}6{{else}}12{{/if}}" id="dragdiv_{{id}}">
+    <div class="input-group">
+      <input type="text" class="form-control" name="{{field}}" id="{{id}}" value="{{value}}" autocomplete="off" readonly/>
+      <span class="input-group-btn"><button class="btn btn-default" onclick="javascript: return clear_image{{id}}();">Delete</button></span>
+    </div>
+    <div class="dropzone dzimage" id="dz_{{id}}" style="margin-top:4px;">
+    </div>
+  </div>
+  <div class="col-xs-6 text-center {{#if value}}{{else}}hidden{{/if}}" style="margin-top:20px;"  id="imagediv_{{id}}">
+    <a href="images/{{value}}" target="_blank" id="link_{{id}}">
+      <img src="images/{{value}}" height="160" />
+    </a>
+  </div>
+</div>
+
+
+
+<script>
+
+  // init_{{id}} is standard way of initialising item and allows Nodemill to do so when creating fields dynamically
+  $(init_{{id}});
+
+  function init_{{id}}() {
+    Dropzone.autoDiscover=false;
+    var params={fieldname: "{{field}}", ext: "{{defaultVal options.ext 'jpg'}}" {{#if options.width}}, width: {{options.width}} {{/if}} {{#if options.height}}, height: {{options.height}} {{/if}} };
+    $("#dz_{{id}}").dropzone({ url: "/upload/image", maxFiles: 1, dictDefaultMessage:"Drop image to upload", uploadMultiple:false,  addRemoveLinks:true, acceptedFiles:".jpeg,.png,.jpg", params: params, success: success{{id}} });
+  }
+
+ function success{{id}}(fileinfo, resp) {
+   var json=JSON.parse(resp);
+   if (json.error) sweetAlert("Error", json.error, "error");
+   if (json.filename) {
+     $("#dragdiv_{{id}}").removeClass("col-xs-12").addClass("col-xs-6");
+     $("#imagediv_{{id}}").removeClass("hidden");
+     $("#{{id}}").val(json.filename);
+     //$("#form").bootstrapValidator('revalidateField', json.field);
+     $("#link_{{id}}").html('<img src="images/' + json.filename + '?t=' + (new Date().getTime()) + '"  height="160" /></a>');
+     $("#link_{{id}}").attr('href', "images/" + json.filename);
+   }
+ }
+
+ function clear_image{{id}}(){
+    if (confirm("Delete?")) {
+      $("#dragdiv_{{id}}").removeClass("col-xs-6").addClass("col-xs-12");
+      $("#imagediv_{{id}}").addClass("hidden");
+      $("#{{id}}").val("");
+      $("#link_{{id}}").html("");
+      //$("#form").bootstrapValidator('revalidateField', 'image');
+    }
+    return false;
+  }
+
+</script>

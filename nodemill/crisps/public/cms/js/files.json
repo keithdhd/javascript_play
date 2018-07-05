@@ -1,0 +1,15 @@
+{
+  "info": "This is the order that these files are minified, please feel free to edit the list below. New items will be added automatically to the foot of this list",
+  "order": [
+    "0.0.jquery.js",
+    "0.1.jquery-ui.min.js",
+    "0.2.jquery.dataTables.min.js",
+    "0.3.jquery.plugin.js",
+    "1.bootstrap.min.js",
+    "bootstrap-datepicker.min.js",
+    "bootstrapValidator.min.js",
+    "dataTables.bootstrap.js",
+    "jquery-te-1.4.0.min.js",
+    "sweetalert.min.js"
+  ]
+}

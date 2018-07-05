@@ -1,0 +1,116 @@
+
+
+/* layout.css Style */
+.upload-drop-zone { height: 200px;border-width: 2px;margin-bottom: 20px;}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc; border-style: dashed; border-color: #ccc; line-height: 200px; text-align: center
+}
+.upload-drop-zone.drop { color: #222; border-color: #222;}
+
+.tabbed {
+  top: 40px;
+  position: "absolute";
+}
+
+.container {
+  
+}
+
+.language-php {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+#main {
+  min-height:40px;
+}
+
+.thumbnail img {
+    width: 100%;
+    
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+    background-color: #FFF
+}
+
+.bs-callout{
+  padding:20px;
+  margin:20px 0;
+  border:1px solid #eee;
+  border-left-width:5px;
+  border-radius:3px
+}
+
+.bs-callout h4{
+  margin-top:0;
+  margin-bottom:5px
+}
+
+.bs-callout p:last-child{
+  margin-bottom:0
+}
+
+.bs-callout code{
+  border-radius:3px
+}
+
+.bs-callout+.bs-callout{
+  margin-top:-5px
+}
+
+.bs-callout-danger{
+  border-left-color:#ce4844
+}
+
+.bs-callout-danger h4{
+  color:#ce4844
+}
+
+.bs-callout-warning{
+  border-left-color:#aa6708
+}
+
+.bs-callout-warning h4{
+  color:#aa6708
+}
+
+.bs-callout-info{
+  border-left-color:#1b809e
+}
+
+.bs-callout-info h4{
+  color:#1b809e
+}
+
+
+.loginbox {margin-top: 0px;}
+
+@media screen and (min-width: 1000px) {
+  .loginbox {margin-top: 60px;}
+}
+
+@media screen and (min-width: 1400px) {
+  .loginbox {margin-top: 100px;}
+}
+
+@media screen and (min-width: 2000px) {
+  .loginbox {margin-top: 120px;}
+}

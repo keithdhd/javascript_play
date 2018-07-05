@@ -1,0 +1,12 @@
+{{!--
+@group Standard
+@desc Single line text field - the most standard of all fields.  If in doubt, use a string field!
+@example name: {type: "string", title: "Name"}
+--}}
+
+
+{{#if options.rows}}
+  <textarea  class="form-control" rows="{{options.rows}}" name="{{field}}" id="{{id}}" placeholder="Enter {{title}}" value="" autocomplete="off">{{value}}</textarea>
+{{else}}
+  <input type="text" class="form-control" name="{{field}}" id="{{id}}" placeholder="Enter {{title}}" value="{{value}}" autocomplete="off"/>
+{{/if}}

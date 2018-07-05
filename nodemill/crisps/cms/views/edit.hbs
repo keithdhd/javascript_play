@@ -1,0 +1,61 @@
+{{#if abovePartial}}
+  {{> (lookup . 'abovePartial') }}
+{{/if}}
+
+<form role="form" class="form-horizontal" method="post" action="{{menu.routePrefix}}{{pagename}}" id="form">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            {{#unless noback}}<a href="{{menu.routePrefix}}{{pagename}}"><i class="glyphicon glyphicon-chevron-left"></i>{{menu.currentPageTitle}}</a> / {{/unless}} {{recordTitle}}
+          </h3>
+        </div>
+        <div class="panel-body">
+          <input type="hidden" name="_id" value="{{id}}">
+          <input type="hidden" name="_nodemill" value="1">
+          {{#each editRows}}
+            {{{this}}}
+          {{/each}}
+
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+              <input type="submit" value="Save" class="btn btn-success" style="min-width: 100px;"/>
+              <a href="{{menu.routePrefix}}{{menu.currentRoute}}" class="btn btn-danger pull-right"
+                 style="min-width: 100px;">Cancel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+{{#if belowPartial}}
+  {{> (lookup . 'belowPartial') }}
+{{/if}}
+
+<!-- Script extras -->
+<script>
+  $(function () {
+    $('#form').submit(function(){
+      $('.cloneable').remove();
+    });
+
+    Dropzone.autoDiscover = false;
+    $('[data-toggle="tooltip"]').tooltip();
+    $("#form").bootstrapValidator({
+      container: "tooltip",
+      feedbackIcons: {
+        valid: "glyphicon glyphicon-ok",
+        invalid: "glyphicon glyphicon-remove",
+        validating: "glyphicon glyphicon-refresh"
+      },
+      fields: {
+        {{#each mandatoryFields}}
+          {{@key}} : {{{this}}},
+        {{/each}}
+      }
+    });
+  });
+</script>

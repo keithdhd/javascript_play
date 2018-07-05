@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="../dist/bundle.js"></script>
+  <script src="scripts/gameRunner.js"></script>
+  <script src="scripts/elements.js"></script>
+  <script src="scripts/displayState.js"></script>
+  <script src="scripts/eventHandler.js"></script>
+  <script src="scripts/app.js"></script>
+</head>
+<body>
+  <main>
+    <div id="container-start">
+      <label>Player 1</label>
+      <input type="text" name="player1-name">
+      <label>Player 2</label>
+      <input type="text" name="player2-name">
+      <button id="btn-start">Start game</button>
+    </div>
+    <div id="container-in-game" style="display:none">
+      <div>
+        <p>
+          <span id="player1-label" class="player-label">Player 1</span>
+          Score:
+          <span id="player1-score">0</span>
+        </p>
+        <p>
+          <span id="player2-label" class="player-label">Player 2</span>
+          Score:
+          <span id="player2-score">0</span></p>
+        </div>
+        <div>
+        <p>It's <span id="current-player">Player 1's</span> turn.</p>
+        <p>Your current score is <span id="turn-score">0</p>
+        <p id="turn-lost" style="display:none">You pigged out!</p>
+        </div>
+        <button id="btn-roll">Roll!</button>
+        <button id="btn-stick">Stick!</button>
+      </div>
+    </main>
+
+  </body>
+
+  </html>

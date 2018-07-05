@@ -1,0 +1,12 @@
+{
+  "auth": {
+    "info": "Choose type as none, basic or sharedkey",
+    "type": "none",
+    "logins": [
+      {"login": "user", "password": "123abc789"}
+    ],
+    "exceptions":[
+      
+    ]
+  }
+}
